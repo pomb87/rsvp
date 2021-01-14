@@ -1,0 +1,20 @@
+<div class="col-12 aligncenter paddingtop-oval-input">
+    <img src="/images/iconParty.png" />
+    <p class="font-courgette-lg">Hi, wer von unseren tollen Gästen bist du?</p>
+</div>
+
+<div class="form-horizontal">
+    <div class="form-group row">
+        <div class="col-12 aligncenter">
+            <input autofocus class="form-control inputfield-width-oval" name="name" id="name" value="<%= model.name %>"
+                placeholder="Vorname Nachname" required>
+        </div>
+    </div>
+
+    <div class="form-group row aligncenter">
+        <label class="col-form-label col-sm-2"></label>
+        <div class="col-12">
+            <input type="submit" id="forwardToRsvpConfirm" value="Weiter" class="btn btn-dark gold" />
+        </div>
+    </div>
+</div>

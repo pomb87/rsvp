@@ -1,0 +1,232 @@
+/***********************LAYOUT ******************************************/
+html, body {
+    height: 100%;
+    overflow:hidden;
+}
+
+div.fullHeight {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+div.background {
+    background: url(/images/plantsSmall.png) no-repeat center center; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ height: 100vh;
+ width: 100vw;
+ size: 25%;
+}
+
+/**********************oval *****************************/
+
+.oval {
+    height: 450px;
+    width: 350px;
+    background-color: white;
+    border-radius: 50%;
+    border-style: double;
+    border-color: rgb(227,188,122);
+}
+
+.oval-md {
+    height: 550px;
+    width: 400px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.oval-lg {
+    height: 750px;
+    width: 500px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+.paddingtop-oval {
+    padding-top: 20px;
+}
+
+.paddingtop-oval-small {
+    padding-top: 10px;
+}
+
+.paddingtop-oval-input {
+    padding-top: 60px;
+}
+
+/*******************buttons****************************/
+
+.gold {
+    background-color: rgb(227,188,122);
+    border-color: rgb(227,188,122);
+}
+
+.gold:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.cancel {
+    border-color: rgb(227,188,122);
+    color: rgb(227,188,122);
+}
+
+.inputfield-width-oval {
+    max-width:250px;
+    margin-left: 50px;
+}
+
+.inputfield-width-oval2 {
+    max-width:200px;
+    margin-left: 75px;
+}
+
+/******************** fonts ***************************/
+
+.font-dancing {
+    font-family: 'Dancing Script', cursive;
+}
+
+.font-courgette {
+    font-family: 'Courgette', cursive;
+}
+
+.font-courgette-lg {
+    font-family: 'Courgette', cursive;
+    font-size: larger;
+}
+
+.font-marck {
+    font-family: 'Marck Script', cursive;
+    font-size: large;
+}
+
+.font-marck-lg {
+    font-family: 'Marck Script', cursive;
+    font-size: x-large;
+}
+
+
+/**************************main page ******************************************/
+  
+  .indexImage{
+    background: url("/images/menuRoundTrans.png")  no-repeat center center;
+    font-size: 110px;
+    background-size: 400px;
+    height: 400px;
+    width: 400px;
+    color: black;
+    display: block;
+    transition: 0.7s;
+    border-style: double;
+    border-color: rgb(227,188,122);
+    border-radius: 50%;
+  }
+
+  .leftImage{
+    height: 100vh;
+    width: auto;
+    float: right;
+    border-left: 3px solid rgb(227,188,122);
+    border-top: 3px solid rgb(227,188,122);
+    border-bottom: 3px solid rgb(227,188,122);
+  }
+
+  .rightImage{
+    height: 100vh;
+    width: auto;
+    border-right: 3px solid rgb(227,188,122);
+    border-top: 3px solid rgb(227,188,122);
+    border-bottom: 3px solid rgb(227,188,122);
+  }
+
+  .noPadding {
+    padding: 0%;
+  }
+
+/********************* validation **********************************************/
+.warning {
+    color: red;
+    border-color: red;
+}
+  
+
+/************************card flip *******************************************/
+#card-toggle-1 {
+    display:none;
+}
+
+.faceleft {
+    transition: all 1s ease-out;
+    transform-origin: left;
+    -webkit-transition: all 1s ease-out;
+    -webkit-transform-origin: left;
+}
+
+.faceright {
+    transition: all 1s ease-out;
+    transform-origin: right;
+    -webkit-transition: all 1s ease-out;
+    -webkit-transform-origin: right;
+  }
+
+.card-toggle:checked + .labelBlock .faceleft {
+    transform: rotateY(-165deg);
+    -webkit-transform: rotateY(-165deg);
+    opacity: 0;
+}
+
+.card-toggle:checked + .labelBlock .faceright {
+    transform: rotateY(-165deg);
+    -webkit-transform: rotateY(-165deg);
+    opacity: 0;
+}
+
+.labelBlock {
+    display: block;
+}
+
+.layoutPosition {
+    position: absolute;
+    top:15%;
+    z-index: 1;
+}
+
+.divFront {
+    z-index: 3;
+}
+
+/**************** open invite flicker *******************/
+@keyframes fadeIn { 
+    from { opacity: 0.6; } 
+  }
+ 
+  
+  .animate-flicker {
+      animation: fadeIn 1.5s infinite alternate;
+  }
+
+  .open-invite {
+    position: fixed;
+    top: 78%; 
+    z-index: 4; 
+    opacity: 1;
+   /** color: rgb(227,188,122);**/
+    font-size: xx-large;
+  }
+
+  .stop-anim {
+    -webkit-animation:'';
+    -moz-animation:none;
+    -ms-animation:'';
+    -o-animation:'';
+    animation:'';
+    opacity: 0;
+  }

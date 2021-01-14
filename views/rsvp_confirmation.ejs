@@ -1,0 +1,41 @@
+<div class="col-12 aligncenter paddingtop-oval">
+    <img src="/images/iconCake.png" />
+    <p class="font-courgette-lg">Danke <%= model.name %>, kommst du zu unserer Hochzeit?</p>
+</div>
+<div class="form-horizontal">
+    <div class="form-group row aligncenter">
+        <input name="name" value="<%= model.name %>" style="display: none;" id="name"/>
+         <div class="col-12">
+            <button type="submit" value="Yes" class="btn btn-success btn-lg gold" id="forwardToRsvpPerson">
+                <i class="fa fa-check"></i>Ja natürlich
+            </button>
+        </div>
+    </div>
+</div>
+<div class="form-horizontal">
+    <div class="form-group row aligncenter">
+        <div class="col-12">
+            <button type="submit" value="Yes" class="btn btn-success gold" id="forwardToRsvpWedding">
+                Nur zur Trauung (14h)
+            </button>
+        </div>
+    </div>
+</div>
+<div class="form-horizontal">
+    <div class="form-group row aligncenter">
+       <div class="col-12">
+            <button type="submit" value="Yes" class="btn btn-success gold" id="forwardToRsvpDinner">
+                Nur zum Dinner (ab 17h)
+            </button>
+        </div>
+    </div>
+</div>
+<div class="form-horizontal">
+    <div class="form-group row aligncenter">
+        <div class="col-12">
+            <button type="submit" value="No" class="btn btn-outline-danger cancel" id="forwardToRsvpDecline">
+                <i class="fa fa-times"></i> Nein
+            </button>
+        </div>
+    </div>
+</div>

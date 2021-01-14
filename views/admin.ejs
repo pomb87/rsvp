@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+  <title>OurDayHasCome</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Marck+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="/js/ajaxcalls.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+<div class="table-responsive-sm">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>RSVP</th>
+          <th>Address</th>
+          <th>Begleiter</th>
+          <th>Kinder</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (const invite of model) { %>
+          <tr>
+            <td><%= invite.NAME %></td>
+            <td><%= invite.RSVP %></td>
+            <td><%= invite.ADDRESS %></td>
+            <td><%= invite.PERSON_COUNT %></td>
+            <td><%= invite.CHILD_COUNT %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+<%- include("footer") -%>

@@ -1,0 +1,89 @@
+<div class="col-12 aligncenter paddingtop-oval-small">
+    <img src="/images/iconDrink.png" />
+    <p class="font-courgette-lg">Wunderbar, das freut uns sehr. Möchtest du jemanden mitbringen?</p>
+</div>
+
+<div class="form-horizontal">
+    <div class="form-group row">
+        <div class="col-12 aligncenter">
+            <input name="name" value="<%= model.name %>" style="display: none;" id="name" />
+            <input name="confirmation" style="display: none;" value="<%= model.confirmation %>" id="confirmation" />
+            <input name="personCount" style="display: none;" id="personCount" />
+            <input name="childCount" style="display: none;" id="childCount" />
+            <div class="col-12">
+                <p>
+                    <button class="btn btn-dark gold" type="button" data-toggle="collapse" data-target="#persons"
+                        aria-expanded="false" aria-controls="persons">
+                        Ja
+                    </button>
+                    <button class="btn btn-dark gold" type="submit" value="no" id="forwardToRsvpAddressNo">
+                        Nein
+                    </button>
+                </p>
+                <div class="collapse" id="persons">
+                    <div class="mx-auto paddingtop-oval-small" style="width: 90%; border: none">
+                        <div class="form-group row">
+                            <div class="col-5">
+                                <p class="font-courgette">Anzahl Begleiter</p>
+                            </div>
+                            <div class="col-7">
+                                <div class="btn-group btn-group-toggle" id="personCountBtnGroup" data-toggle="buttons">
+                                    <label class="btn btn-warning gold active" id="personLbl0">
+                                        <input type="radio" name="personCount" id="person0" autocomplete="off" checked
+                                            value="0">
+                                        0
+                                    </label>
+                                    <label class="btn btn-warning gold" id="personLbl1">
+                                        <input type="radio" name="personCount" id="person1" autocomplete="off"
+                                            value="1">
+                                        1
+                                    </label>
+                                    <label class="btn btn-warning gold" id="personLbl2">
+                                        <input type="radio" name="personCount" id="person2" autocomplete="off"
+                                            value="2"> 2
+                                    </label>
+                                    <label class="btn btn-warning gold" id="personLbl3">
+                                        <input type="radio" name="personCount" id="person3" autocomplete="off"
+                                            value="3"> 3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-5">
+                                <p class="font-courgette">Davon Kinder</p>
+                            </div>
+                            <div class="col-7">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons" id="childCountBtnGroup">
+                                    <label class="btn btn-warning gold active" id="childLbl0">
+                                        <input type="radio" name="childCount" id="child0" autocomplete="off" checked
+                                            value="0">
+                                        0
+                                    </label>
+                                    <label class="btn btn-warning gold" id="childLbl1">
+                                        <input type="radio" name="childCount" id="child1" autocomplete="off" value="1">
+                                        1
+                                    </label>
+                                    <label class="btn btn-warning gold" id="childLbl2">
+                                        <input type="radio" name="childCount" id="child2" autocomplete="off" value="2">
+                                        2
+                                    </label>
+                                    <label class="btn btn-warning gold" id="childLbl3">
+                                        <input type="radio" name="childCount" id="child3" autocomplete="off" value="3">
+                                        3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row aligncenter">
+                            <label class="col-form-label col-sm-2"></label>
+                            <div class="col-12">
+                                <input type="submit" value="Weiter" class="btn btn-dark gold" id="forwardToRsvpAddress"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
